@@ -39,7 +39,7 @@ public with sharing class ProductBriefTriggerHandler{
 
 		Database.insert(projectShares, false); //Should I allow for partial processing?
 
-		//Should I process the save results?
+		//Should I process the save results? handle exceptions?
 
 
 
