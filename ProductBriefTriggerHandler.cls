@@ -17,11 +17,11 @@ public with sharing class ProductBriefTriggerHandler{
 
 		projectsToGrantAccessTo = [SELECT Id, Related_Opportunity__c FROM Project__c WHERE Related_Opportunity__c = :opportunity];
 
-		List<Project__c__Share> projectShares = new List<Project__c__Share>;
+		List<Project__Share> projectShares = new List<Project__Share>;
 		for(Project__c project: projectsToGrantAccessTo) {
-			
+
 			//Instantiate the sharing object
-			creatorShare = new Project__c__Share();
+			creatorShare = new Project__Share();
 			
 			//Set the Id of record being shared
 			creatorShare.ParentId = brief.Id;
